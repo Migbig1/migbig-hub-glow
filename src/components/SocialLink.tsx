@@ -52,10 +52,11 @@ export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0, stats
               <img 
                 src={logo} 
                 alt={title} 
-                className={cn(
-                  title === "Discord" ? "w-12 h-12 object-contain" : "w-full h-full object-cover"
-                )}
-              />
+               className={cn(
+  title === "Discord" ? "w-12 h-12 object-contain" : 
+  title === "TikTok" ? "w-10 h-10 object-contain" :
+  "w-full h-full object-cover"
+)}              />
             ) : (
               <Icon className="w-6 h-6 text-white" />
             )}
