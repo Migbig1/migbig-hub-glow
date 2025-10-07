@@ -85,8 +85,8 @@ export default {
           "50%": { transform: "translateY(-10px)" },
         },
         "glow-pulse": {
-          "0%, 100%": { filter: "drop-shadow(0 0 8px currentColor)" },
-          "50%": { filter: "drop-shadow(0 0 20px currentColor)" },
+          "0%, 100%": { opacity: "0.4", filter: "blur(20px)" },
+          "50%": { opacity: "0.65", filter: "blur(25px)" },
         },
         "slide-up": {
           "0%": { transform: "translateY(20px)", opacity: "0" },
@@ -99,7 +99,7 @@ export default {
         "fade-in": "fade-in 0.5s ease-out",
         "scale-in": "scale-in 0.3s ease-out",
         "float": "float 3s ease-in-out infinite",
-        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 4s ease-in-out infinite",
         "slide-up": "slide-up 0.5s ease-out",
       },
       backgroundImage: {

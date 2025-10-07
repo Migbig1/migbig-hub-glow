@@ -1,7 +1,12 @@
 import { Youtube, Music2, Video, MessageCircle } from "lucide-react";
 import { SocialLink } from "@/components/SocialLink";
+import { socialStats } from "@/data/stats";
 import profileImg from "@/assets/profile.png";
 import bannerImg from "@/assets/banner.png";
+import youtubeLogo from "@/assets/youtube-logo.png";
+import tiktokLogo from "@/assets/tiktok-logo.png";
+import tiktokEditLogo from "@/assets/tiktok-edit-logo.png";
+import discordLogo from "@/assets/discord-logo.png";
 
 const Index = () => {
   const socialLinks = [
@@ -10,24 +15,32 @@ const Index = () => {
       icon: Youtube,
       title: "YouTube",
       gradient: "primary" as const,
+      stats: `${socialStats.youtube.subscribers} abonnés`,
+      logo: youtubeLogo,
     },
     {
       href: "https://www.tiktok.com/@migbigbs",
       icon: Music2,
       title: "TikTok Principal",
       gradient: "secondary" as const,
+      stats: `${socialStats.tiktokMain.followers} abonnés`,
+      logo: tiktokLogo,
     },
     {
       href: "https://www.tiktok.com/@migbigedit",
       icon: Video,
       title: "TikTok Edit",
       gradient: "accent" as const,
+      stats: `${socialStats.tiktokEdit.followers} abonnés`,
+      logo: tiktokEditLogo,
     },
     {
       href: "https://discord.gg/yHSyrMx2vV",
       icon: MessageCircle,
       title: "Discord",
       gradient: "orange" as const,
+      stats: `${socialStats.discord.members} membres`,
+      logo: discordLogo,
     },
   ];
 

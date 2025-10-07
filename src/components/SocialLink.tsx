@@ -7,6 +7,8 @@ interface SocialLinkProps {
   title: string;
   gradient: "primary" | "secondary" | "accent" | "orange";
   delay?: number;
+  stats?: string;
+  logo?: string;
 }
 
 const gradientClasses = {
@@ -16,7 +18,7 @@ const gradientClasses = {
   orange: "from-[hsl(18_100%_60%)] via-primary to-[hsl(18_100%_60%)] hover:shadow-[0_0_40px_rgba(255,107,53,0.6)]",
 };
 
-export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0 }: SocialLinkProps) => {
+export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0, stats, logo }: SocialLinkProps) => {
   return (
     <a
       href={href}
@@ -41,15 +43,26 @@ export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0 }: Soc
         />
         <div className="relative bg-card rounded-2xl px-8 py-6 flex items-center gap-4 transition-all duration-300 group-hover:bg-card/80">
           <div className={cn(
-            "p-3 rounded-xl bg-gradient-to-br transition-all duration-300",
+            "p-3 rounded-xl bg-gradient-to-br transition-all duration-300 flex items-center justify-center",
             gradientClasses[gradient],
             "group-hover:scale-110 group-hover:rotate-3"
           )}>
-            <Icon className="w-6 h-6 text-white" />
+            {logo ? (
+              <img src={logo} alt={title} className="w-6 h-6" />
+            ) : (
+              <Icon className="w-6 h-6 text-white" />
+            )}
           </div>
-          <span className="text-xl font-bold text-foreground group-hover:text-white transition-colors duration-300">
-            {title}
-          </span>
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-foreground group-hover:text-white transition-colors duration-300">
+              {title}
+            </span>
+            {stats && (
+              <span className="text-sm text-muted-foreground group-hover:text-white/80 transition-colors duration-300">
+                {stats}
+              </span>
+            )}
+          </div>
           <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <svg
               className="w-5 h-5 text-white"
