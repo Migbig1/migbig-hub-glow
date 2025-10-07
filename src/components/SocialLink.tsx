@@ -53,7 +53,7 @@ export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0, stats
                 src={logo} 
                 alt={title} 
                 className={cn(
-                  title === "Discord" ? "w-8 h-8 object-contain" : "w-full h-full object-cover"
+                  title === "Discord" ? "w-12 h-12 object-contain" : "w-full h-full object-cover"
                 )}
               />
             ) : (
