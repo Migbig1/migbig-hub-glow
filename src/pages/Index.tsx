@@ -75,8 +75,8 @@ const Index = () => {
               className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/30 object-cover shadow-2xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
             />
           </div>
-          <h1 className="text-4xl md:text-5xl font-black text-center mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-fade-in">
-            MigbigBS
+          <h1 className="text-4xl md:text-5xl font-black text-center mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-fade-in leading-tight pb-1">
+            Migbig
           </h1>
           <p className="text-muted-foreground text-center text-lg animate-fade-in" style={{ animationDelay: "100ms" }}>
             Retrouve tous mes liens ici ! 🎮✨

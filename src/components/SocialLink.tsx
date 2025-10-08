@@ -44,7 +44,7 @@ export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0, stats
         <div className="relative bg-card rounded-2xl px-8 py-6 flex items-center gap-4 transition-all duration-300 group-hover:bg-card/80">
           <div className={cn(
             "rounded-xl bg-gradient-to-br transition-all duration-300 flex items-center justify-center overflow-hidden",
-            logo && title !== "Discord" ? "p-0 w-12 h-12" : "p-3 w-12 h-12",
+            logo && title !== "Discord" ? "p-0 w-12 h-12" : "p-2 w-16 h-16",
             gradientClasses[gradient],
             "group-hover:scale-110 group-hover:rotate-3"
           )}>
@@ -53,8 +53,10 @@ export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0, stats
                 src={logo} 
                 alt={title} 
                 className={cn(
-                  title === "Discord" || title === "TikTok Principal" 
-                    ? "w-12 h-12 object-contain" 
+                  title === "Discord" 
+                    ? "w-14 h-14 object-contain" 
+                    : title === "TikTok Principal"
+                    ? "w-16 h-16 object-cover"
                     : "w-full h-full object-cover"
                 )}
               />
