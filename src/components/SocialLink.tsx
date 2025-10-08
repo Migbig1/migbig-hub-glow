@@ -45,7 +45,7 @@ export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0, stats
           <div className={cn(
             "rounded-xl transition-all duration-300 flex items-center justify-center overflow-hidden",
             title === "TikTok Principal" 
-              ? "p-4 w-20 h-20 bg-black" 
+              ? "p-3 w-16 h-16 bg-black" 
               : logo && title !== "Discord" 
               ? "p-0 w-12 h-12 bg-gradient-to-br" 
               : "p-2 w-16 h-16 bg-gradient-to-br",
@@ -60,7 +60,7 @@ export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0, stats
                   title === "Discord" 
                     ? "w-14 h-14 object-contain" 
                     : title === "TikTok Principal"
-                    ? "w-16 h-16 object-contain"
+                    ? "w-14 h-14 object-contain"
                     : "w-full h-full object-cover"
                 )}
               />
