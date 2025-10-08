@@ -53,11 +53,13 @@ export const SocialLink = ({ href, icon: Icon, title, gradient, delay = 0, stats
                 src={logo} 
                 alt={title} 
                 className={cn(
-                  title === "Discord" ? "w-8 h-8 object-contain" : "w-full h-full object-cover"
+                  title === "Discord" || title === "TikTok Principal" 
+                    ? "w-12 h-12 object-contain" 
+                    : "w-full h-full object-cover"
                 )}
               />
             ) : (
-              <Icon className="w-6 h-6 text-white" />
+              Icon && <Icon className="w-6 h-6 text-white" />
             )}
           </div>
           <div className="flex flex-col">
