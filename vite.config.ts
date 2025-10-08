@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/migbig-hub-glow/", // <-- DOIT être ici, à la racine !
+  base: "./",
   server: {
     host: "::",
     port: 8080,
